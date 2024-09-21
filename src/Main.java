@@ -1,4 +1,4 @@
-public class Author {
+class Author {
     private String name;
     private String lastName;
 
@@ -13,16 +13,16 @@ public class Author {
         return this.lastName;
     }
 }
-public class Book {
+    class Book {
     private String nameBooks;
     private int agePublication;
-    private String author;
+    private String Author;
 
     public Book(String nameBooks, String author, int agePublication) {
 
         this.nameBooks = nameBooks;
         this.agePublication = agePublication;
-        this.author = author;
+        this.Author = Author;
     }
     public int getAgePublication() {
         return this.agePublication;
@@ -31,7 +31,7 @@ public class Book {
         return this.nameBooks;
     }
     public String getAuthor() {
-        return this.author;
+        return this.Author;
     }
     public void setAgePublication(int agePublication) {
         this.agePublication = agePublication;
