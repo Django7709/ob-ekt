@@ -1,10 +1,12 @@
 public class Author {
     private String name;
     private String lastName;
+    private Author author;
 
-    public Author(String name, String lastName) {
+    public Author(String name, String lastName, Author author) {
         this.name = name;
         this.lastName = lastName;
+        this.author = author;
     }
 
     public String getName() {
@@ -13,19 +15,21 @@ public class Author {
 
     public String getLastName() {
         return this.lastName;
+        public Author getAuthor () {
+            return this.author;
+        }
     }
 }
 
 public class Book {
     private String nameBooks;
     private int agePublication;
-    private Author author;
 
-        public Book(String nameBooks, Author author, int agePublication) {
+        public Book(String nameBooks, int agePublication) {
 
             this.nameBooks = nameBooks;
             this.agePublication = agePublication;
-            this.author = author;
+
         }
         public int getAgePublication() {
             return this.agePublication;
@@ -33,12 +37,8 @@ public class Book {
         public String getNameBook() {
             return this.nameBooks;
         }
-
-            public Author getAuthor() {
-                return this.author;
-            }
-
         }
+
 public class Main {
     public static void main(String[] args) {
         printSeparator();
